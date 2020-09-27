@@ -1,0 +1,133 @@
+$button-color: coral;
+$button-active-color: #cb5322;
+$button-text-color: #fdbca2;
+
+$button-add-color: #2dcc1a;
+$button-add-color-shadow: rgba(39, 167, 27, 0.7);
+$button-add-color-text: #a8ffa1;
+
+.sidebar{
+  position: fixed!important;
+  top: 0!important;
+  right: 0!important;
+  width: 25%!important;
+  height: 100%!important;
+  border-left: $button-color 2px solid;
+  background: #fff8ea;
+  padding: 1rem;
+  &-header{
+    padding: 1rem;
+    border-bottom: $button-color 2px solid;
+    margin-bottom: 1rem;
+  }
+  &-properties{
+    overflow-x: scroll;
+    padding: 2rem 1rem 1rem 1rem;
+    height: 50%;
+    max-height: 350px;
+    &-block{
+
+    }
+  }
+  &-properties-add{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    &__input{
+      border:none;
+      border-radius: 20px;
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
+      position: relative!important;
+      transition: 0.3s;
+      &:focus{
+        transition: all 0.3s;
+        border: $button-add-color 1px solid;
+        background: $button-add-color-text;
+      }
+      &:hover{
+        background: rgb(168, 255, 161, 0.5);
+      }
+    }
+    &__button{
+      border: none;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem 1rem 0.3rem 1rem;
+      background: $button-add-color;
+      transition: all 0.4s;
+      &:hover{
+        color: $button-add-color-text;
+        transition: all 0.4s;
+        box-shadow: 0 0 15px $button-add-color-shadow;
+      }
+    }
+  }
+  &-property{
+    display: flex;
+    flex-direction: column;
+    padding: .2rem;
+    &-block{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &__value{
+        border:none;
+        border-radius: 20px;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        position: relative!important;
+        transition: 0.3s;
+        &:focus{
+          transition: all 0.3s;
+          border: $button-add-color 1px solid;
+          background: $button-add-color-text;
+        }
+        &:hover{
+          background: rgb(168, 255, 161, 0.5);
+        }
+      }
+      &__deleteButton{
+        cursor: pointer;
+        font-size: 2rem;
+        color: IndianRed;
+        transition: all 0.4s;
+        &:hover{
+          font-size:  2.5rem;
+          color: red;
+          transition: all 0.4s;
+        }
+      }
+    }
+
+
+  }
+  &-element-actions{
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__button{
+      color: #7d3f2c;
+      position: relative;
+      border-radius: 2rem;
+      padding: 0.5rem;
+      border: none;
+      background: $button-color;
+      transition: .3s;
+      margin: 0.2rem;
+      &:active{
+        transition: all 0.4s;
+        background: $button-active-color;
+      }
+      &:hover{
+        transition: all 0.4s;
+        color: $button-text-color;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      }
+    }
+  }
+}

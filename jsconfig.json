@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths":{
+      "@src/*": ["/src/*"],
+      "@components/*": ["/src/components/*"],
+      "@layout/*": ["/src/components/LayoutComponents/*"],
+      "@styles/*": ["/styles/*"],
+      "@redux/*": ["/src/redux/*"],
+      "@reducers/*": ["./src/redux/reducers/*"],
+      "@actions/*": ["/src/redux/actions/*"],
+      "@action_types/*": ["/src/redux/action_types*"],
+    }
+  }
+}
